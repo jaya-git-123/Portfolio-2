@@ -1,38 +1,180 @@
-.App {
+.portfolio {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+.nav-links ul {
+  display: flex;
+  list-style-type: none;
+}
+.nav-links li {
+  margin-left: 20px;
+  font-size: 23px;
+  cursor: pointer;
+  color: #666;
+}
+.nav-links li:hover {
+  color: #333;
+}
+h1:hover {
+  color: black;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 2px 0;
+}
+section {
+  padding: 40px 0;
+}
+h1 {
+  font-size: 3rem;
+  color: #333;
+}
+h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+p {
+  color: #666;
+  line-height: 1.6;
+}
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home-content {
+  flex: 1;
+}
+.home-image {
+  flex: 1;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.skill-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100px;
+}
+.skill-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.project-item {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+}
+.technology-tag {
+  display: inline-block;
+  background-color: #e0e0e0;
+  padding: 5px 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+input, textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+button {
+  padding: 10px 20px;
+  background-color: #333;
   color: white;
+  border: none;
+  border-radius: 5px;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
-
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #444;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .home-image {
+    margin-top: 20px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-links.active {
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .nav-links.active ul {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .nav-links.active li {
+    margin: 10px 0;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .project-list {
+    grid-template-columns: 1fr;
   }
 }

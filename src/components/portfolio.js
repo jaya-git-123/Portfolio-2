@@ -102,7 +102,7 @@ const Projects = () => {
       title: "Portfolio Website",
       description: "A personal portfolio website showcasing my projects and skills.",
       technologies: ["React", "CSS", "Responsive Design"],
-      // liveDemo: "https://portfolio.example.com"
+      liveDemo: "https://weather-dashboard-1.netlify.app/"
     },
     {
       title: "Weather App",
@@ -200,7 +200,7 @@ const Footer = () => (
 );
 
 export default function Portfolio() {
-  const [ setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -219,7 +219,8 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <div className="portfolio">
+      <div className={`portfolio ${isScrolled ? 'scrolled' : ''}`}>
+     
       <Navbar />
       <Home />
       <About />

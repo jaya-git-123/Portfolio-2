@@ -102,7 +102,7 @@ const Projects = () => {
       title: "Portfolio Website",
       description: "A personal portfolio website showcasing my projects and skills.",
       technologies: ["React", "CSS", "Responsive Design"],
-      liveDemo: "https://portfolio.example.com"
+      // liveDemo: "https://portfolio.example.com"
     },
     {
       title: "Weather App",

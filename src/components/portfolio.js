@@ -102,7 +102,7 @@ const Projects = () => {
       title: "Portfolio Website",
       description: "A personal portfolio website showcasing my projects and skills.",
       technologies: ["React", "CSS", "Responsive Design"],
-      liveDemo: "https://weather-dashboard-1.netlify.app/"
+      liveDemo: "https://portfoli0-1-new.netlify.app/"
     },
     {
       title: "Weather App",

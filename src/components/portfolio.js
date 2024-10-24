@@ -200,7 +200,7 @@ const Footer = () => (
 );
 
 export default function Portfolio() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [ setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
